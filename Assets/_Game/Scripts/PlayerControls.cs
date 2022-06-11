@@ -5,10 +5,14 @@ public class PlayerControls : NetworkBehaviour
 {
 	private CharacterController _characterController;
 	
+	[Header("Look Variables")]
 	[SerializeField] private float _mouseSensitivity = 100f;
+	
+	[Header("Movement Variables")]
 	[SerializeField] private float _speed = 4f;
 	
 	
+	[Header("Jumping Variables")]
 	[SerializeField] private float _gravity = -9.81f;
 	[SerializeField] private Vector3 _velocity;
 	[SerializeField] private Transform _groundCheck;
@@ -31,9 +35,7 @@ public class PlayerControls : NetworkBehaviour
 
 
 		if (Input.GetKeyDown(KeyCode.L))
-		{
 			Cursor.lockState = Cursor.lockState == CursorLockMode.None ? CursorLockMode.Locked : CursorLockMode.None;
-		}
 
 
 		HandleCameraView();
