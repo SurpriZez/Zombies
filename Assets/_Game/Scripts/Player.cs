@@ -46,12 +46,11 @@ public class Player : NetworkBehaviour
 		
 	public override void OnStartLocalPlayer()
 	{
-
 		Camera.main.transform.SetParent(transform);
 		Camera.main.transform.localPosition = new Vector3(0, 0.7f, 0.3f);
 
-		floatingInfo.transform.localPosition = new Vector3(0, -0.3f, 0.6f);
-		floatingInfo.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+		//floatingInfo.transform.localPosition = new Vector3(0, -0.3f, 0.6f);
+		//floatingInfo.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
 		string name = "Player" + Random.Range(100, 999);
 		Color color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));

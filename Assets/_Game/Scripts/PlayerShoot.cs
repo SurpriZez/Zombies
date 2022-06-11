@@ -15,6 +15,7 @@ namespace _Game.Scripts
 				var ray = new Ray(transform.position, transform.forward);
 				if(Physics.Raycast(ray, out var hit, Mathf.Infinity))
 				{
+					Debug.Log($"Hit something named {hit.transform.name}");
 					var damageable = hit.transform.GetComponent<Damagable>();
 					if (damageable != null)
 					{
